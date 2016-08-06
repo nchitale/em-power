@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		20F98E871D40568200ABCDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98E861D40568200ABCDB8 /* AppDelegate.swift */; };
-		20F98E891D40568200ABCDB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98E881D40568200ABCDB8 /* ViewController.swift */; };
+		20F98E891D40568200ABCDB8 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98E881D40568200ABCDB8 /* CardViewController.swift */; };
 		20F98E8C1D40568300ABCDB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F98E8A1D40568300ABCDB8 /* Main.storyboard */; };
 		20F98E8E1D40568300ABCDB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F98E8D1D40568300ABCDB8 /* Assets.xcassets */; };
 		20F98E911D40568300ABCDB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F98E8F1D40568300ABCDB8 /* LaunchScreen.storyboard */; };
 		20F98E9C1D40568400ABCDB8 /* EmpowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98E9B1D40568400ABCDB8 /* EmpowerTests.swift */; };
+		20F98EA71D406A8200ABCDB8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EA61D406A8200ABCDB8 /* Card.swift */; };
+		20F98EA81D406A8200ABCDB8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EA61D406A8200ABCDB8 /* Card.swift */; };
+		20F98EAA1D5194A100ABCDB8 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EA91D5194A000ABCDB8 /* CardTableViewCell.swift */; };
+		20F98EAC1D519CA700ABCDB8 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EAB1D519CA700ABCDB8 /* CardTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +32,7 @@
 /* Begin PBXFileReference section */
 		20F98E831D40568100ABCDB8 /* Empower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Empower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F98E861D40568200ABCDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20F98E881D40568200ABCDB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20F98E881D40568200ABCDB8 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		20F98E8B1D40568300ABCDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20F98E8D1D40568300ABCDB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20F98E901D40568300ABCDB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,9 @@
 		20F98E971D40568400ABCDB8 /* EmpowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmpowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F98E9B1D40568400ABCDB8 /* EmpowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpowerTests.swift; sourceTree = "<group>"; };
 		20F98E9D1D40568500ABCDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F98EA61D406A8200ABCDB8 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		20F98EA91D5194A000ABCDB8 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		20F98EAB1D519CA700ABCDB8 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				20F98E861D40568200ABCDB8 /* AppDelegate.swift */,
-				20F98E881D40568200ABCDB8 /* ViewController.swift */,
+				20F98E881D40568200ABCDB8 /* CardViewController.swift */,
 				20F98E8A1D40568300ABCDB8 /* Main.storyboard */,
+				20F98EAB1D519CA700ABCDB8 /* CardTableViewController.swift */,
+				20F98EA61D406A8200ABCDB8 /* Card.swift */,
+				20F98EA91D5194A000ABCDB8 /* CardTableViewCell.swift */,
 				20F98E8D1D40568300ABCDB8 /* Assets.xcassets */,
 				20F98E8F1D40568300ABCDB8 /* LaunchScreen.storyboard */,
 				20F98E921D40568300ABCDB8 /* Info.plist */,
@@ -197,8 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20F98E891D40568200ABCDB8 /* ViewController.swift in Sources */,
+				20F98E891D40568200ABCDB8 /* CardViewController.swift in Sources */,
+				20F98EA71D406A8200ABCDB8 /* Card.swift in Sources */,
 				20F98E871D40568200ABCDB8 /* AppDelegate.swift in Sources */,
+				20F98EAC1D519CA700ABCDB8 /* CardTableViewController.swift in Sources */,
+				20F98EAA1D5194A100ABCDB8 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F98E9C1D40568400ABCDB8 /* EmpowerTests.swift in Sources */,
+				20F98EA81D406A8200ABCDB8 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

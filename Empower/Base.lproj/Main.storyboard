@@ -1,13 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sXK-4Z-n3j">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Chemists-->
+        <scene sceneID="FY5-a0-KTS">
+            <objects>
+                <tableViewController id="Te4-8G-yNd" customClass="CardTableViewController" customModule="Empower" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jxm-N9-QL6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CardTableViewCell" rowHeight="90" id="BEj-Mg-5c0" customClass="CardTableViewCell" customModule="Empower" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BEj-Mg-5c0" id="Fnq-cM-40C">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Biology" translatesAutoresizingMaskIntoConstraints="NO" id="2LJ-y9-BgJ">
+                                            <rect key="frame" x="0.0" y="-19" width="128" height="128"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-jf-GlX">
+                                            <rect key="frame" x="136" y="8" width="456" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="B0h-jf-GlX" id="9Kp-5y-ZWJ"/>
+                                    <outlet property="photoImageView" destination="2LJ-y9-BgJ" id="4bh-Kj-zg6"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="xY6-lx-t9x"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Te4-8G-yNd" id="qOL-Ni-RcA"/>
+                            <outlet property="delegate" destination="Te4-8G-yNd" id="Xnc-ER-i7Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chemists" id="VgP-hA-BwV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eO1-YB-azH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="942"/>
+        </scene>
+        <!--Name of Chemist-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="Empower" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +63,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Biology" translatesAutoresizingMaskIntoConstraints="NO" id="cbQ-y3-F5H">
+                                <rect key="frame" x="117" y="170" width="320" height="320"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cbQ-y3-F5H" secondAttribute="height" multiplier="1:1" id="m4Y-Fi-QhM"/>
+                                    <constraint firstAttribute="width" secondItem="cbQ-y3-F5H" secondAttribute="height" multiplier="1:1" id="rQi-vk-Psi"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jaD-XF-mw0" appends="YES" id="3y0-67-P23"/>
+                                </connections>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-hU-GGi">
+                                <rect key="frame" x="117" y="170" width="320" height="320"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="leading" secondItem="ae6-hU-GGi" secondAttribute="leading" id="OTG-EZ-WDx"/>
+                            <constraint firstItem="ae6-hU-GGi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="Ty4-NQ-nkx"/>
+                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="bottom" secondItem="ae6-hU-GGi" secondAttribute="bottom" id="Y3O-ni-jbb"/>
+                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="top" secondItem="ae6-hU-GGi" secondAttribute="top" id="bkc-UE-rYD"/>
+                            <constraint firstItem="ae6-hU-GGi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="neL-PY-8kq"/>
+                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="trailing" secondItem="ae6-hU-GGi" secondAttribute="trailing" id="xGS-lk-XNE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Name of Chemist" id="SaW-ur-2Ny"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="cbQ-y3-F5H" id="UnM-nO-qqg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="jaD-XF-mw0">
+                    <connections>
+                        <action selector="goToCard:" destination="BYZ-38-t0r" id="nVr-Uv-ad4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1164" y="848"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j7d-lM-qGE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sXK-4Z-n3j" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BMr-Ye-uhE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Te4-8G-yNd" kind="relationship" relationship="rootViewController" id="agp-2h-RRN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gni-3D-M9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-445" y="942"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Biology" width="565" height="353"/>
+    </resources>
 </document>
