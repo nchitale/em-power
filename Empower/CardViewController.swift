@@ -11,7 +11,7 @@ import UIKit
 class CardViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField! //may need to click & drag from text field
     @IBOutlet weak var photoImageView: UIImageView!
     
     // This value is passed by "CardTableViewController" in "prepareForSegue(_:sender:)"
@@ -38,6 +38,8 @@ class CardViewController: UIViewController {
     // This method lets you configure a view controller before it's presented
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let name = nameTextField.text ?? ""
+        //if there are issues with above line, try: let name = card.name or try: let name = navigationItem.title
+        
         let photo = photoImageView.image
         
         // Set the card to be passed to CardTableViewController after unwind segue
