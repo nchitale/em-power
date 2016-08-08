@@ -17,6 +17,8 @@
 		20F98EA81D406A8200ABCDB8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EA61D406A8200ABCDB8 /* Card.swift */; };
 		20F98EAA1D5194A100ABCDB8 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EA91D5194A000ABCDB8 /* CardTableViewCell.swift */; };
 		20F98EAC1D519CA700ABCDB8 /* CardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EAB1D519CA700ABCDB8 /* CardTableViewController.swift */; };
+		20F98EAE1D581BC000ABCDB8 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EAD1D581BC000ABCDB8 /* CategoryTableViewCell.swift */; };
+		20F98EB01D581EB700ABCDB8 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F98EAF1D581EB700ABCDB8 /* CategoryTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		20F98EA61D406A8200ABCDB8 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		20F98EA91D5194A000ABCDB8 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		20F98EAB1D519CA700ABCDB8 /* CardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewController.swift; sourceTree = "<group>"; };
+		20F98EAD1D581BC000ABCDB8 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		20F98EAF1D581EB700ABCDB8 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				20F98E861D40568200ABCDB8 /* AppDelegate.swift */,
 				20F98E881D40568200ABCDB8 /* CardViewController.swift */,
 				20F98E8A1D40568300ABCDB8 /* Main.storyboard */,
+				20F98EAF1D581EB700ABCDB8 /* CategoryTableViewController.swift */,
+				20F98EAD1D581BC000ABCDB8 /* CategoryTableViewCell.swift */,
 				20F98EAB1D519CA700ABCDB8 /* CardTableViewController.swift */,
 				20F98EA61D406A8200ABCDB8 /* Card.swift */,
 				20F98EA91D5194A000ABCDB8 /* CardTableViewCell.swift */,
@@ -207,11 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F98EB01D581EB700ABCDB8 /* CategoryTableViewController.swift in Sources */,
 				20F98E891D40568200ABCDB8 /* CardViewController.swift in Sources */,
 				20F98EA71D406A8200ABCDB8 /* Card.swift in Sources */,
 				20F98E871D40568200ABCDB8 /* AppDelegate.swift in Sources */,
 				20F98EAC1D519CA700ABCDB8 /* CardTableViewController.swift in Sources */,
 				20F98EAA1D5194A100ABCDB8 /* CardTableViewCell.swift in Sources */,
+				20F98EAE1D581BC000ABCDB8 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

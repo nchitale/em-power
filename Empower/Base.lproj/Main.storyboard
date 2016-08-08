@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sXK-4Z-n3j">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d5D-WT-zib">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -7,6 +7,42 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Category Table View Controller-->
+        <scene sceneID="Fcq-eJ-Yzy">
+            <objects>
+                <tableViewController id="d5D-WT-zib" customClass="CategoryTableViewController" customModule="Empower" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bao-bw-xKF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="400" id="EXg-58-mQ0" customClass="CategoryTableViewCell" customModule="Empower" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="400"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EXg-58-mQ0" id="dxa-a3-lNJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TechnicalManagement" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-gU-nfU">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="zOc-gU-nfU" id="4wk-Ah-s0e"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="d5D-WT-zib" id="JPh-JH-rXn"/>
+                            <outlet property="delegate" destination="d5D-WT-zib" id="tRy-PS-B6j"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhd-kT-7fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-361" y="509"/>
+        </scene>
         <!--Chemists-->
         <scene sceneID="FY5-a0-KTS">
             <objects>
@@ -119,10 +155,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gni-3D-M9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-445" y="942"/>
+            <point key="canvasLocation" x="-1027" y="942"/>
         </scene>
     </scenes>
     <resources>
         <image name="Biology" width="565" height="353"/>
+        <image name="TechnicalManagement" width="527" height="296"/>
     </resources>
 </document>
