@@ -11,7 +11,11 @@ import UIKit
 class CategoryTableViewController: UITableViewController {
     
     // MARK: Properties
-    var categories = [Card]() //mutable array
+    var categories = [NCategory]() //mutable array
+    var sample = CardTableViewController()
+    
+    // MARK: Actions
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,22 +31,22 @@ class CategoryTableViewController: UITableViewController {
     
     func loadCategories () {
         let photo1 = UIImage(named: "CS")!
-        let category1 = Card(name: "Computer Science", photo: photo1)!
+        let category1 = NCategory(name: "Computer Science", photo: photo1, people: sample)!
         
         let photo2 = UIImage(named: "Engineering")!
-        let category2 = Card(name: "Engineering", photo: photo2)!
+        let category2 = NCategory(name: "Engineering", photo: photo2, people: sample)!
         
         let photo3 = UIImage(named: "Math")!
-        let category3 = Card(name: "Math", photo: photo3)!
+        let category3 = NCategory(name: "Math", photo: photo3, people: sample)!
         
         let photo4 = UIImage(named: "Medicine")!
-        let category4 = Card(name: "Medicine", photo: photo4)!
+        let category4 = NCategory(name: "Medicine", photo: photo4, people: sample)!
         
         let photo5 = UIImage(named: "Science")!
-        let category5 = Card(name: "Science", photo: photo5)!
+        let category5 = NCategory(name: "Science", photo: photo5, people: sample)!
         
         let photo6 = UIImage(named: "TechnicalManagement")!
-        let category6 = Card(name: "Technical Management", photo: photo6)!
+        let category6 = NCategory(name: "Technical Management", photo: photo6, people: sample)!
         
         categories += [category1, category2, category3, category4, category5, category6]
     }

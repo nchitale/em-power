@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="d5D-WT-zib">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ThP-UT-4jc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -17,7 +17,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="400" id="EXg-58-mQ0" customClass="CategoryTableViewCell" customModule="Empower" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="400"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="400"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EXg-58-mQ0" id="dxa-a3-lNJ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
@@ -25,11 +25,13 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TechnicalManagement" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-gU-nfU">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                            <gestureRecognizers/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="photoImageView" destination="zOc-gU-nfU" id="4wk-Ah-s0e"/>
+                                    <segue destination="Te4-8G-yNd" kind="show" id="fvW-el-YNv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -38,10 +40,11 @@
                             <outlet property="delegate" destination="d5D-WT-zib" id="tRy-PS-B6j"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Asc-Nn-B7U"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhd-kT-7fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-361" y="509"/>
+            <point key="canvasLocation" x="131" y="848"/>
         </scene>
         <!--Chemists-->
         <scene sceneID="FY5-a0-KTS">
@@ -73,7 +76,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="B0h-jf-GlX" id="9Kp-5y-ZWJ"/>
                                     <outlet property="photoImageView" destination="2LJ-y9-BgJ" id="4bh-Kj-zg6"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="xY6-lx-t9x"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Q3P-gQ-ZX0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -86,7 +89,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO1-YB-azH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="367" y="942"/>
+            <point key="canvasLocation" x="1085" y="848"/>
         </scene>
         <!--Name of Chemist-->
         <scene sceneID="tne-QT-ifu">
@@ -137,25 +140,25 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1164" y="848"/>
+            <point key="canvasLocation" x="1922" y="848"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="j7d-lM-qGE">
+        <scene sceneID="V6q-NJ-W1j">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sXK-4Z-n3j" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ThP-UT-4jc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BMr-Ye-uhE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j3w-as-W28">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Te4-8G-yNd" kind="relationship" relationship="rootViewController" id="agp-2h-RRN"/>
+                        <segue destination="d5D-WT-zib" kind="relationship" relationship="rootViewController" id="u7i-rB-nOX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gni-3D-M9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNb-jV-ssl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1027" y="942"/>
+            <point key="canvasLocation" x="-681" y="848"/>
         </scene>
     </scenes>
     <resources>
