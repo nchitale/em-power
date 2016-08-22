@@ -14,6 +14,8 @@ class CardTableViewController: UITableViewController {
     var cards = [Card]() //declares a property on this class and initializes it w/ default val - empty array of Card objects
                         //by making cards a variable instead of constant, you make the array mutable - can add items after you initialize it
 
+    var categoryName: String = ""
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -23,6 +25,39 @@ class CardTableViewController: UITableViewController {
     }
     
     func loadCards() {
+        
+        //switch based on category name
+        switch categoryName {
+            case "Computer Science":
+                let photo1 = UIImage(named: "CS Rosie")!
+                let card1 = Card(name: "CS Rosie", photo: photo1)!
+                cards += [card1];
+            case "Engineering":
+                let photo1 = UIImage(named: "Engr Girl")!
+                let card1 = Card(name: "Engr Girl", photo: photo1)!
+                cards += [card1];
+            case "Math":
+                let photo1 = UIImage(named: "Math board")!
+                let card1 = Card(name: "Math board", photo: photo1)!
+                cards += [card1];
+            case "Medicine":
+                let photo1 = UIImage(named: "Doctor")!
+                let card1 = Card(name: "Doctor", photo: photo1)!
+                cards += [card1];
+            case "Science":
+                let photo1 = UIImage(named: "Blue Brain")!
+                let card1 = Card(name: "Blue Brain", photo: photo1)!
+                cards += [card1];
+            case "Technical Management":
+                let photo1 = UIImage(named: "Sheryl")!
+                let card1 = Card(name: "Sheryl", photo: photo1)!
+                cards += [card1];
+            default:
+                fatalError("Invalid Category Name")
+            
+        }
+        
+        /*
         let photo1 = UIImage(named: "Alloy")!
         let card1 = Card(name: "Chemist 1", photo: photo1)!
         
@@ -33,7 +68,7 @@ class CardTableViewController: UITableViewController {
         let card3 = Card(name: "Chemist 3", photo: photo3)!
         
         cards += [card1, card2, card3];
-        
+        */
     }
 
     override func didReceiveMemoryWarning() {

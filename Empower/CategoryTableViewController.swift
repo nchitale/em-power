@@ -115,14 +115,22 @@ class CategoryTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let cardDetailViewController = segue.destinationViewController as! CardTableViewController //downcasts destination view controller to a CardViewController - forced type cast - if unsuccessful, app will crash
+        
+        if let selectedCardCell = sender as? CategoryTableViewCell { //tries to downcast sender to a Category Cell - if unsucessful, this if stmt isn't executed
+            
+            //fetches the CardTableViewController object corresponding to the selected cell in table view
+            let indexPath = tableView.indexPathForCell(selectedCardCell)!
+            let selectedCard = categories[indexPath.row]
+            
+            //assigns category name to the card property of the destination view controller, an instance of CardTableViewController
+            cardDetailViewController.categoryName = selectedCard.name
+            
+        }
     }
-    */
 
 }
