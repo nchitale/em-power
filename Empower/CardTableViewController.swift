@@ -29,29 +29,89 @@ class CardTableViewController: UITableViewController {
         //switch based on category name
         switch categoryName {
             case "Computer Science":
-                let photo1 = UIImage(named: "CS Rosie")!
-                let card1 = Card(name: "CS Rosie", photo: photo1)!
-                cards += [card1];
+                
+                let photo1 = UIImage(named: "CS1")!
+                let card1 = Card(name: "Sarah Clatterbuck", photo: photo1)!
+                
+                let photo2 = UIImage(named: "CS2")!
+                let card2 = Card(name: "Divya Jain", photo: photo2)!
+                
+                let photo3 = UIImage(named: "CS3")!
+                let card3 = Card(name: "Angie Byron", photo: photo3)!
+                
+                let photo4 = UIImage(named: "CS4")!
+                let card4 = Card(name: "Avni Shah", photo: photo4)!
+                
+                let photo5 = UIImage(named: "CS5")!
+                let card5 = Card(name: "Amanda Wixted", photo: photo5)!
+                
+                let photo6 = UIImage(named: "CS6")!
+                let card6 = Card(name: "Alicia Perez", photo: photo6)!
+                
+                cards += [card1, card2, card3, card4, card5, card6];
+            
             case "Engineering":
+                
                 let photo1 = UIImage(named: "Engr Girl")!
                 let card1 = Card(name: "Engr Girl", photo: photo1)!
                 cards += [card1];
+            
             case "Math":
+                
                 let photo1 = UIImage(named: "Math board")!
                 let card1 = Card(name: "Math board", photo: photo1)!
                 cards += [card1];
+            
             case "Medicine":
-                let photo1 = UIImage(named: "Doctor")!
-                let card1 = Card(name: "Doctor", photo: photo1)!
-                cards += [card1];
+            
+                let photo1 = UIImage(named: "Med1")!
+                let card1 = Card(name: "Kathy Magliato", photo: photo1)!
+                
+                let photo2 = UIImage(named: "Med2")!
+                let card2 = Card(name: "Leigh Curl", photo: photo2)!
+                
+                let photo3 = UIImage(named: "Med3")!
+                let card3 = Card(name: "Patricia Bath", photo: photo3)!
+                
+                let photo4 = UIImage(named: "Med4")!
+                let card4 = Card(name: "Allison Martin", photo: photo4)!
+                
+                let photo5 = UIImage(named: "Med5")!
+                let card5 = Card(name: "Susan Blumenthal", photo: photo5)!
+                
+                let photo6 = UIImage(named: "Med6")!
+                let card6 = Card(name: "Anna Wu", photo: photo6)!
+                
+                cards += [card1, card2, card3, card4, card5, card6];
+            
             case "Science":
+                
                 let photo1 = UIImage(named: "Blue Brain")!
                 let card1 = Card(name: "Blue Brain", photo: photo1)!
                 cards += [card1];
+            
             case "Technical Management":
-                let photo1 = UIImage(named: "Sheryl")!
-                let card1 = Card(name: "Sheryl", photo: photo1)!
-                cards += [card1];
+                
+                let photo1 = UIImage(named: "TM1")!
+                let card1 = Card(name: "Susan O'Day", photo: photo1)!
+                
+                let photo2 = UIImage(named: "TM2")!
+                let card2 = Card(name: "Michele Kang", photo: photo2)!
+                
+                let photo3 = UIImage(named: "TM3")!
+                let card3 = Card(name: "Dona Sarkar", photo: photo3)!
+                
+                let photo4 = UIImage(named: "TM4")!
+                let card4 = Card(name: "April Underwood", photo: photo4)!
+                
+                let photo5 = UIImage(named: "TM5")!
+                let card5 = Card(name: "Eva-Lotta Lam", photo: photo5)!
+                
+                let photo6 = UIImage(named: "TM6")!
+                let card6 = Card(name: "Leila Janah", photo: photo6)!
+                
+                cards += [card1, card2, card3, card4, card5, card6];
+            
             default:
                 fatalError("Invalid Category Name")
             

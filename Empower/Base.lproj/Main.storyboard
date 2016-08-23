@@ -11,20 +11,20 @@
         <scene sceneID="Fcq-eJ-Yzy">
             <objects>
                 <tableViewController id="d5D-WT-zib" customClass="CategoryTableViewController" customModule="Empower" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bao-bw-xKF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="175" sectionHeaderHeight="28" sectionFooterHeight="28" id="Bao-bw-xKF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="200" id="EXg-58-mQ0" customClass="CategoryTableViewCell" customModule="Empower" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="200"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" rowHeight="175" id="EXg-58-mQ0" customClass="CategoryTableViewCell" customModule="Empower" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="175"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EXg-58-mQ0" id="dxa-a3-lNJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="199"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="174"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TechnicalManagement" translatesAutoresizingMaskIntoConstraints="NO" id="zOc-gU-nfU">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="399"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="415" height="175"/>
                                             <gestureRecognizers/>
                                         </imageView>
                                     </subviews>
@@ -46,7 +46,7 @@
             </objects>
             <point key="canvasLocation" x="131" y="848"/>
         </scene>
-        <!--Chemists-->
+        <!--People-->
         <scene sceneID="FY5-a0-KTS">
             <objects>
                 <tableViewController id="Te4-8G-yNd" customClass="CardTableViewController" customModule="Empower" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                             <outlet property="delegate" destination="Te4-8G-yNd" id="Xnc-ER-i7Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Chemists" id="VgP-hA-BwV"/>
+                    <navigationItem key="navigationItem" title="People" id="VgP-hA-BwV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eO1-YB-azH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
