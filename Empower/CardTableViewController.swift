@@ -112,10 +112,26 @@ class CardTableViewController: UITableViewController {
                 cards += [card1, card2, card3, card4, card5, card6];
             
             case "Science":
+                //TODO: fix names
+                let photo1 = UIImage(named: "Sci1")!
+                let card1 = Card(name: "Susan O'Day", photo: photo1)!
                 
-                let photo1 = UIImage(named: "Blue Brain")!
-                let card1 = Card(name: "Blue Brain", photo: photo1)!
-                cards += [card1];
+                let photo2 = UIImage(named: "Sci2")!
+                let card2 = Card(name: "Michele Kang", photo: photo2)!
+                
+                let photo3 = UIImage(named: "Sci3")!
+                let card3 = Card(name: "Dona Sarkar", photo: photo3)!
+                
+                let photo4 = UIImage(named: "Sci4")!
+                let card4 = Card(name: "April Underwood", photo: photo4)!
+                
+                let photo5 = UIImage(named: "Sci5")!
+                let card5 = Card(name: "Eva-Lotta Lam", photo: photo5)!
+                
+                let photo6 = UIImage(named: "Sci6")!
+                let card6 = Card(name: "Leila Janah", photo: photo6)!
+                
+                cards += [card1, card2, card3, card4, card5, card6];
             
             case "Technical Management":
                 
