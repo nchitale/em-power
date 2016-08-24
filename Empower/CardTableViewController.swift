@@ -51,41 +51,40 @@ class CardTableViewController: UITableViewController {
                 cards += [card1, card2, card3, card4, card5, card6];
             
             case "Engineering":
-                //TODO: fix names
+                
                 let photo1 = UIImage(named: "Eng1")!
-                let card1 = Card(name: "Sarah Clatterbuck", photo: photo1)!
+                let card1 = Card(name: "Erin Brooks", photo: photo1)!
                 
                 let photo2 = UIImage(named: "Eng2")!
-                let card2 = Card(name: "Divya Jain", photo: photo2)!
+                let card2 = Card(name: "Roma Agrawal", photo: photo2)!
                 
                 let photo3 = UIImage(named: "Eng3")!
-                let card3 = Card(name: "Angie Byron", photo: photo3)!
+                let card3 = Card(name: "Chen-Nee Chuah", photo: photo3)!
                 
                 let photo4 = UIImage(named: "Eng4")!
-                let card4 = Card(name: "Avni Shah", photo: photo4)!
+                let card4 = Card(name: "Sabrina Thompson", photo: photo4)!
                 
                 let photo5 = UIImage(named: "Eng5")!
-                let card5 = Card(name: "Amanda Wixted", photo: photo5)!
+                let card5 = Card(name: "Propa Ghosh", photo: photo5)!
                 
                 let photo6 = UIImage(named: "Eng6")!
-                let card6 = Card(name: "Alicia Perez", photo: photo6)!
+                let card6 = Card(name: "Roxann Laird", photo: photo6)!
                 
                 cards += [card1, card2, card3, card4, card5, card6];
             
             case "Math":
-                //TODO: fix names
 
                 let photo1 = UIImage(named: "Math1")!
-                let card1 = Card(name: "Sarah Clatterbuck", photo: photo1)!
+                let card1 = Card(name: "Maryam Mirzakhani", photo: photo1)!
                 
                 let photo2 = UIImage(named: "Math2")!
-                let card2 = Card(name: "Divya Jain", photo: photo2)!
+                let card2 = Card(name: "Manuela Campanelli", photo: photo2)!
                 
                 let photo3 = UIImage(named: "Math3")!
-                let card3 = Card(name: "Angie Byron", photo: photo3)!
+                let card3 = Card(name: "Caitlin Smallwood", photo: photo3)!
                 
                 let photo4 = UIImage(named: "Math4")!
-                let card4 = Card(name: "Avni Shah", photo: photo4)!
+                let card4 = Card(name: "Lisa LaVange", photo: photo4)!
                 
                 cards += [card1, card2, card3, card4];
             
@@ -112,24 +111,24 @@ class CardTableViewController: UITableViewController {
                 cards += [card1, card2, card3, card4, card5, card6];
             
             case "Science":
-                //TODO: fix names
+                
                 let photo1 = UIImage(named: "Sci1")!
-                let card1 = Card(name: "Susan O'Day", photo: photo1)!
+                let card1 = Card(name: "Vickie Tsui", photo: photo1)!
                 
                 let photo2 = UIImage(named: "Sci2")!
-                let card2 = Card(name: "Michele Kang", photo: photo2)!
+                let card2 = Card(name: "Pardis Sabeti", photo: photo2)!
                 
                 let photo3 = UIImage(named: "Sci3")!
-                let card3 = Card(name: "Dona Sarkar", photo: photo3)!
+                let card3 = Card(name: "Fabiola Gianotti", photo: photo3)!
                 
                 let photo4 = UIImage(named: "Sci4")!
-                let card4 = Card(name: "April Underwood", photo: photo4)!
+                let card4 = Card(name: "Kristen Marhaver", photo: photo4)!
                 
                 let photo5 = UIImage(named: "Sci5")!
-                let card5 = Card(name: "Eva-Lotta Lam", photo: photo5)!
+                let card5 = Card(name: "Cori Bargmann", photo: photo5)!
                 
                 let photo6 = UIImage(named: "Sci6")!
-                let card6 = Card(name: "Leila Janah", photo: photo6)!
+                let card6 = Card(name: "Emily Levesque", photo: photo6)!
                 
                 cards += [card1, card2, card3, card4, card5, card6];
             
