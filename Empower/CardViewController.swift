@@ -14,6 +14,10 @@ class CardViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField! //may need to click & drag from text field
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var backgroundTextView: UITextView!
+
+    //@IBOutlet weak var backgroundTextView: UITextView!
+    
     // This value is passed by "CardTableViewController" in "prepareForSegue(_:sender:)"
     var card: Card?
     
@@ -25,6 +29,7 @@ class CardViewController: UIViewController {
             navigationItem.title = card.name
             //nameTextField.text = card.name // this line causes crash
             photoImageView.image = card.photo
+            backgroundTextView.text = card.backgroundText
         }
     }
 
@@ -41,9 +46,10 @@ class CardViewController: UIViewController {
         //if there are issues with above line, try: let name = card.name or try: let name = navigationItem.title
         
         let photo = photoImageView.image
+        let backgroundText = backgroundTextView.text
         
         // Set the card to be passed to CardTableViewController after unwind segue
-        card = Card(name: name, photo: photo)
+        card = Card(name: name, photo: photo, backgroundText: backgroundText)
     }
 
     // MARK: Actions

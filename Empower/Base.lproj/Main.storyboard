@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -103,33 +102,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Biology" translatesAutoresizingMaskIntoConstraints="NO" id="cbQ-y3-F5H">
-                                <rect key="frame" x="117" y="170" width="320" height="320"/>
-                                <gestureRecognizers/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-9y-ivk">
+                                <rect key="frame" x="20" y="124" width="560" height="464"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="Biology" translatesAutoresizingMaskIntoConstraints="NO" id="cbQ-y3-F5H">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="jaD-XF-mw0" appends="YES" id="3y0-67-P23"/>
+                                        </connections>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbt-n1-ANh">
+                                        <rect key="frame" x="0.0" y="332" width="560" height="132"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="cbQ-y3-F5H" secondAttribute="height" multiplier="1:1" id="m4Y-Fi-QhM"/>
-                                    <constraint firstAttribute="width" secondItem="cbQ-y3-F5H" secondAttribute="height" multiplier="1:1" id="rQi-vk-Psi"/>
+                                    <constraint firstItem="cbQ-y3-F5H" firstAttribute="centerX" secondItem="Msk-9y-ivk" secondAttribute="centerX" constant="120" id="NUU-O7-SIE"/>
+                                    <constraint firstAttribute="trailing" secondItem="tbt-n1-ANh" secondAttribute="trailing" id="yC3-XI-W1F"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jaD-XF-mw0" appends="YES" id="3y0-67-P23"/>
-                                </connections>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ae6-hU-GGi">
-                                <rect key="frame" x="117" y="170" width="320" height="320"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NUU-O7-SIE"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="leading" secondItem="ae6-hU-GGi" secondAttribute="leading" id="OTG-EZ-WDx"/>
-                            <constraint firstItem="ae6-hU-GGi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="Ty4-NQ-nkx"/>
-                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="bottom" secondItem="ae6-hU-GGi" secondAttribute="bottom" id="Y3O-ni-jbb"/>
-                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="top" secondItem="ae6-hU-GGi" secondAttribute="top" id="bkc-UE-rYD"/>
-                            <constraint firstItem="ae6-hU-GGi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="106" id="neL-PY-8kq"/>
-                            <constraint firstItem="cbQ-y3-F5H" firstAttribute="trailing" secondItem="ae6-hU-GGi" secondAttribute="trailing" id="xGS-lk-XNE"/>
+                            <constraint firstItem="Msk-9y-ivk" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XzI-SF-0Ey"/>
+                            <constraint firstItem="Msk-9y-ivk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="hqp-Si-IOM"/>
+                            <constraint firstItem="Msk-9y-ivk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="o7s-Eb-60d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Msk-9y-ivk" secondAttribute="bottom" constant="12" id="tlR-SQ-kJS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Name of Chemist" id="SaW-ur-2Ny"/>
                     <connections>
+                        <outlet property="backgroundTextView" destination="tbt-n1-ANh" id="w5C-b5-4W9"/>
                         <outlet property="photoImageView" destination="cbQ-y3-F5H" id="UnM-nO-qqg"/>
                     </connections>
                 </viewController>
