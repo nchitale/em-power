@@ -19,7 +19,7 @@ class CategoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.title = "Empower"
         loadCategories()
 
         // Uncomment the following line to preserve selection between presentations
