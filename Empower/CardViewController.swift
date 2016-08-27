@@ -14,6 +14,7 @@ class CardViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var backgroundTextView: UITextView!
+    var subfield: String = ""
     
     // This value is passed by "CardTableViewController" in "prepareForSegue(_:sender:)"
     var card: Card?
@@ -27,7 +28,8 @@ class CardViewController: UIViewController {
             //nameTextField.text = card.name // this line causes crash
             photoImageView.image = card.photo
             backgroundTextView.text = card.backgroundText
-            backgroundTextView.editable = false
+            backgroundTextView.editable = false //prevents user from editing description
+            subfield = card.subfield
         }
     }
 
@@ -45,9 +47,10 @@ class CardViewController: UIViewController {
         
         let photo = photoImageView.image
         let backgroundText = backgroundTextView.text
+        //subfield is already defined in viewDidLoad so don't need to define it again
         
         // Set the card to be passed to CardTableViewController after unwind segue
-        card = Card(name: name, photo: photo, backgroundText: backgroundText)
+        card = Card(name: name, photo: photo, backgroundText: backgroundText, subfield: subfield)
     }
 
     // MARK: Actions

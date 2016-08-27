@@ -14,12 +14,14 @@ class Card {
     var name: String
     var photo: UIImage?
     var backgroundText: String!
+    var subfield: String
     
     // MARK: Initialization
-    init?(name: String, photo: UIImage?, backgroundText: String!) {
+    init?(name: String, photo: UIImage?, backgroundText: String!, subfield: String) {
         self.name = name
         self.photo = photo
         self.backgroundText = backgroundText
+        self.subfield = subfield
         
         //Initialization should fail if there is no name
         if name.isEmpty {

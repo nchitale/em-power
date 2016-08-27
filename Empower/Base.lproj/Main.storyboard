@@ -82,9 +82,15 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Biology" translatesAutoresizingMaskIntoConstraints="NO" id="2LJ-y9-BgJ">
                                             <rect key="frame" x="0.0" y="-19" width="128" height="128"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-jf-GlX">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ragini Bhattacharya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0h-jf-GlX">
                                             <rect key="frame" x="136" y="8" width="456" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HUMAN FACTORS DESIGN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBr-H0-zgr">
+                                            <rect key="frame" x="136" y="34" width="456" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -93,6 +99,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="B0h-jf-GlX" id="9Kp-5y-ZWJ"/>
                                     <outlet property="photoImageView" destination="2LJ-y9-BgJ" id="4bh-Kj-zg6"/>
+                                    <outlet property="subfieldLabel" destination="aBr-H0-zgr" id="66r-qL-iSf"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Q3P-gQ-ZX0"/>
                                 </connections>
                             </tableViewCell>
