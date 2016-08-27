@@ -17,9 +17,11 @@ class CardTableViewController: UITableViewController {
     var categoryName: String = ""
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
+        
+        //set the top of screen to show what category we're in
+        navigationItem.title = categoryName
+        
         //load the data
         loadCards()
     }
