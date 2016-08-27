@@ -135,7 +135,7 @@ class CardTableViewController: UITableViewController {
             case "Science":
                 
                 let photo1 = UIImage(named: "Sci1")!
-                let text1 = "Sci1"
+                let text1 = "DISCOVERY CHEMIST\n\n\"My field of computational modeling may not always produce the correct answers, but it provides hypotheses which lead to new designs. Being able to apply this field in project-team settings with a common goal of delivering molecules for unmet needs is a wonderful opportunity.\"\n\nThink about all the people in the world with devastating diseases and conditions that rely on medication. Vickie and her team work directly in developing these new drugs to solve the world\'s toughest medical needs. As a Senior Scientist in Discovery Chemistry at Genentech, a leading biopharmaceutical company, Vickie uses computational chemistry, a branch of chemistry that utilizes computer simulations, to guide the design and discovery of small molecule drugs. Her innovative early-stage research has the potential to identify drugs to treat breast cancer!\n\nEducation:\nPh.D. Macromolecular and Cellular Structure and Chemistry (The Scripps Research Institute)\nB.S. Chemistry (Yale)\n\nCheck out some of Vickie\'s noteworthy publications here:\nhttp://www.gene.com/scientists/our-scientists/vickie-tsui"
                 let card1 = Card(name: "Vickie Tsui", photo: photo1, backgroundText: text1)!
                 
                 let photo2 = UIImage(named: "Sci2")!

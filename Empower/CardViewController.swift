@@ -11,12 +11,9 @@ import UIKit
 class CardViewController: UIViewController {
     
     // MARK: Properties
-    @IBOutlet weak var nameTextField: UITextField! //may need to click & drag from text field
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
-    
     @IBOutlet weak var backgroundTextView: UITextView!
-
-    //@IBOutlet weak var backgroundTextView: UITextView!
     
     // This value is passed by "CardTableViewController" in "prepareForSegue(_:sender:)"
     var card: Card?
@@ -30,6 +27,7 @@ class CardViewController: UIViewController {
             //nameTextField.text = card.name // this line causes crash
             photoImageView.image = card.photo
             backgroundTextView.text = card.backgroundText
+            backgroundTextView.editable = false
         }
     }
 
