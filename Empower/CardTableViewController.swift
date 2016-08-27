@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class CardTableViewController: UITableViewController {
     
@@ -241,6 +242,14 @@ class CardTableViewController: UITableViewController {
         
         cards += [card1, card2, card3];
         */
+    }
+    
+    // MARK: Safari View Controller
+    func showPage(link: String) {
+        if let url = NSURL(string: link) {
+            let vc = SFSafariViewController(URL: url)
+            presentViewController(vc, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
