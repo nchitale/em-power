@@ -13,11 +13,11 @@ class Card {
     // MARK: Properties
     var name: String
     var photo: UIImage?
-    var backgroundText: String!
+    var backgroundText: NSAttributedString
     var subfield: String
     
     // MARK: Initialization
-    init?(name: String, photo: UIImage?, backgroundText: String!, subfield: String) {
+    init?(name: String, photo: UIImage?, backgroundText: NSAttributedString, subfield: String) {
         self.name = name
         self.photo = photo
         self.backgroundText = backgroundText

@@ -27,7 +27,7 @@ class CardViewController: UIViewController {
             navigationItem.title = card.name
             //nameTextField.text = card.name // this line causes crash
             photoImageView.image = card.photo
-            backgroundTextView.text = card.backgroundText
+            backgroundTextView.attributedText = card.backgroundText
             backgroundTextView.editable = false //prevents user from editing description
             subfield = card.subfield
         }
@@ -46,7 +46,7 @@ class CardViewController: UIViewController {
         //if there are issues with above line, try: let name = card.name or try: let name = navigationItem.title
         
         let photo = photoImageView.image
-        let backgroundText = backgroundTextView.text
+        let backgroundText = backgroundTextView.attributedText
         //subfield is already defined in viewDidLoad so don't need to define it again
         
         // Set the card to be passed to CardTableViewController after unwind segue
