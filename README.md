@@ -3,7 +3,7 @@ women. scientists. engineers. innovators. leaders.
 
 Team members: Nandini Chitale, Ragini Bhattacharya, Summer Wang
 
-Video demo: http://empowerucla.wixsite.com/main
+Video demo: https://www.youtube.com/watch?v=ViRvT8pGXCc&feature=youtu.be
 
 UCLA Code for the Mission Submission 2016. 
 Track 1: Education - Inspiring Women in STEM
