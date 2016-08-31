@@ -11,3 +11,12 @@ Track 1: Education - Inspiring Women in STEM
 Coded with love in Thousand Oaks, CA.
 
 ![1](http://i63.tinypic.com/2rxyx3s.png)
+![2](http://i67.tinypic.com/14cf82h.png)
+![3]()
+![4]()
+![5]()
+![6]()
+![7]()
+![8]()
+![9]()
+![10]()
