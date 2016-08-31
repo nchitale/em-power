@@ -12,37 +12,29 @@ import SafariServices
 class CardTableViewController: UITableViewController {
     
     // MARK: Properties
-    var cards = [Card]() //declares a property on this class and initializes it w/ default val - empty array of Card objects
-                        //by making cards a variable instead of constant, you make the array mutable - can add items after you initialize it
-
+    
+    var cards = [Card]()
     var categoryName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set the top of screen to show what category we're in
+        // set the top of screen to show what category we're in
         navigationItem.title = categoryName
         
-        //load the data
+        // load the data
         loadCards()
     }
     
+    // Loads list of women in a particular STEM field category.
     func loadCards() {
         
-        //switch based on category name
+        // switch based on category name
         switch categoryName {
             case "Computer Science":
                 let photo1 = UIImage(named: "CS1")!
                 let subfield1 = "WEB DEVELOPMENT"
                 
-                /*
-                UIColor(hue: 0.5833, saturation: 0.76, brightness: 0.47, alpha: 1.0) /* #1d4a79 */
-                UIColor(hue: 210/360, saturation: 76/100, brightness: 47/100, alpha: 1.0) /* #1d4a79 */
-                
-                UIColor(red: 0.1137, green: 0.2902, blue: 0.4745, alpha: 1.0) /* #1d4a79 */
-                UIColor(red: 29/255, green: 74/255, blue: 121/255, alpha: 1.0) /* #1d4a79 */
-                */
-            
                 let quote1: NSString = "WEB DEVELOPER\n\n\"I learned to acknowledge my accomplishments to myself first and then to acknowledge them with others. Instead of minimizing my efforts: \'I just wrote a tiny piece of Javascript for that\'; I can say \'Yes, I contributed a key part of that release.\'\"\n\nSarah Clatterbuck currently leads the web development team at LinkedIn, a huge business oriented social networking company. As LinkedIn\'s primary platform is its website, Sarah has a huge role to play in maintaining the website\'s main infrastructure, understanding the technical components that make it run, and improving its functionality. Leading an innovative cross functional team, Sarah also works on developing new technical initiatives for the company such as improving web accessibility for people with disabilities.\n\nEducation:\nM.S. Information Architecture and Systems Design (San Jose State University)\nB.S. Advertising (UCSF)\n\nCheck out this interview with Sarah:\nhttp://www.huffingtonpost.com/laura-dunn/women-in-business-qa-sara_b_7430278.html";
 
                 let attributedText1: NSMutableAttributedString = NSMutableAttributedString(string: quote1 as String)
@@ -404,34 +396,10 @@ class CardTableViewController: UITableViewController {
                 fatalError("Invalid Category Name")
             
         }
-        
-        /*
-        let photo1 = UIImage(named: "Alloy")!
-        let card1 = Card(name: "Chemist 1", photo: photo1)!
-        
-        let photo2 = UIImage(named: "Doctor")!
-        let card2 = Card(name: "Chemist 2", photo: photo2)!
-        
-        let photo3 = UIImage(named: "Office")!
-        let card3 = Card(name: "Chemist 3", photo: photo3)!
-        
-        cards += [card1, card2, card3];
-        */
     }
-    
-/*
-    // MARK: Safari View Controller
-       func showPage(link: String) {
-        if let url = NSURL(string: link) {
-            let vc = SFSafariViewController(URL: url)
-            presentViewController(vc, animated: true, completion: nil)
-        }
-    }
-*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -444,6 +412,7 @@ class CardTableViewController: UITableViewController {
         return cards.count
     }
 
+    // Sets up a particular woman's profile card
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // Table view cells are reused and should be dequeued using a cell identifier
@@ -462,45 +431,9 @@ class CardTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cardDetailViewController = segue.destinationViewController as! CardViewController //downcasts destination view controller to a CardViewController - forced type cast - if unsuccessful, app will crash
         

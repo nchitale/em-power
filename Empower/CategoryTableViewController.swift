@@ -11,25 +11,27 @@ import UIKit
 class CategoryTableViewController: UITableViewController {
     
     // MARK: Properties
-    var categories = [NCategory]() //mutable array
+    
+    // array of STEM field categories
+    var categories = [NCategory]()
+    
+    // list view of people within a field
     var sample = CardTableViewController()
     
     // MARK: Actions
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //set top of screen title
         navigationItem.title = "Empower"
+        
         loadCategories()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    // Loads 6 STEM category photos and associated objects into view.
     func loadCategories () {
+        
         let photo1 = UIImage(named: "CS")!
         let category1 = NCategory(name: "Computer Science", photo: photo1, people: sample)!
         
@@ -53,7 +55,6 @@ class CategoryTableViewController: UITableViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -66,7 +67,7 @@ class CategoryTableViewController: UITableViewController {
         return categories.count
     }
 
-    
+    // Sets up a particular STEM field category
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "CategoryTableViewCell"
         
@@ -79,45 +80,9 @@ class CategoryTableViewController: UITableViewController {
         return cell
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let cardDetailViewController = segue.destinationViewController as! CardTableViewController //downcasts destination view controller to a CardViewController - forced type cast - if unsuccessful, app will crash
         
